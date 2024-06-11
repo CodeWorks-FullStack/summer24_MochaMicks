@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://em-content.zobj.net/source/microsoft/379/teacup-without-handle_1f375.png">
+  <title>Mocha Micks</title>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- NOTE defer keeps the script from loading until after the html content has loaded -->
+  <script src="app.js" defer></script>
+</head>
+
+<body data-bs-theme="dark">
+  <header class="bg-danger p-2 fs-3 fw-bold text-light">
+    <i class="mdi mdi-coffee-maker"></i> Mocha Micks
+  </header>
+
+  <main class="container">
+    <section class="row my-2">
+      <!-- STUB menu-items -->
+      <div class="col-md-8">
+
+        <section class="row g-3">
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-img-top">
+                <img class="card-img"
+                  src="https://images.unsplash.com/photo-1662047102608-a6f2e492411f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fENhcmFtZWwlMjBmcmFwcGV8ZW58MHx8MHx8fDA%3D"
+                  alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Caramel Frappe</h5>
+                <p class="card-text">Nice and Ice blended Caramel Drink for the morning traffic jam.</p>
+                <p class="fw-bold text-end">$10.99</p>
+                <!-- <button class="btn btn-danger" onclick="buyFrappe()"><i class="mdi mdi-plus"></i> Add to Order</button> -->
+                <button class="btn btn-danger" onclick="addToOrderByName('Caramel Frappe')"><i class="mdi mdi-plus"></i>
+                  Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-img-top">
+                <img class="card-img"
+                  src="https://plus.unsplash.com/premium_photo-1680497044033-5dc96f699b81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29jb251dCUyMG1vY2hhfGVufDB8fDB8fHww"
+                  alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Coconut Mocha</h5>
+                <p class="card-text">Are you nutty for coconut? We are. Buy it!</p>
+                <p class="fw-bold text-end">$12.74</p>
+                <!-- <button class="btn btn-danger" onclick="addToOrder(1)"><i class="mdi mdi-plus"></i> Add to
+                  Order</button> -->
+                <button class="btn btn-danger" onclick="addToOrderByName('Coconut Mocha')"><i class="mdi mdi-plus"></i>
+                  Add to
+                  Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-img-top">
+                <img class="card-img"
+                  src="https://plus.unsplash.com/premium_photo-1672078159587-d4f89723047c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29mZmUlMjBtYWtlciUyMHN0b3ZlfGVufDB8fDB8fHww"
+                  alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">OSBWHBW</h5>
+                <p class="card-text">Ol' School, back West, Hot Bean Water, just like Mr. Washington liked it.</p>
+                <p class="fw-bold text-end">$0.90</p>
+                <button class="btn btn-danger" onclick="addToOrderByName('OSBWHBW')"><i class="mdi mdi-plus"></i> Add to
+                  Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-img-top">
+                <img class="card-img"
+                  src="https://images.unsplash.com/photo-1592919210782-91f4f6f721a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RlYW1pbmclMjBob3QlMjBjaG9jb2xhdGV8ZW58MHx8MHx8fDA%3D"
+                  alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Smoldering CaoCao Drink</h5>
+                <p class="card-text">It's hot chocolate so hot, guaranteed to burn your child's mouth.</p>
+                <p class="fw-bold text-end">$8.53</p>
+                <button class="btn btn-danger" onclick="addToOrderByName('Smoldering CaoCao Drink')"><i
+                    class="mdi mdi-plus"></i> Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- STUB order stuff -->
+      <div class="col">
+
+        <section class="row">
+          <p class="fs-3 text-light fw-bold">Order</p>
+          <hr />
+          <div id="order-list" class="col-12">
+            <!-- Order items get injected here -->
+          </div>
+          <hr />
+          <div class="col-12 text-light fw-bold">
+            Total: <span id="order-total"></span>
+          </div>
+          <div class="col-12 text-end">
+            <button class="btn btn-danger" onclick="clearCart()">Place Order</button>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+  </main>
+
+
+</body>
+
+</html>
