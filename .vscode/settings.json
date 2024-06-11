@@ -17,5 +17,8 @@
     "titleBar.inactiveBackground": "#9816d499",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#9816d4"
+  "peacock.color": "#9816d4",
+  "cSpell.words": [
+    "unessicary"
+  ]
 }

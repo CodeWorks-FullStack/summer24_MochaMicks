@@ -73,7 +73,7 @@ function addToOrderByName(drinkName) {
   drawOrder()
 }
 
-
+// Loop over the array of items in the menu, adding strings together to create a little chunk of HTML that we add to our DOM (index.html)
 function drawOrder() {
   // console.log(`- ${menu[0].name} x${menu[0].quantity} $${menu[0].price * menu[0].quantity}`);
   const orderListElm = document.getElementById('order-list')
@@ -107,8 +107,9 @@ function getOrderTotal() {
   return total // return passes data OUT of a function, back to wherever it was called
 }
 
+// loop over all the items on the menu and set their quantity to 0
 function clearCart() {
-  window.prompt("please enter your credit card number")
+  window.prompt("please enter your credit card number") // unessicary prompt for fun 
   for (let i = 0; i < menu.length; i++) {
     const item = menu[i]
     item.quantity = 0
